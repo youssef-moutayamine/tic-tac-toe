@@ -1,4 +1,3 @@
-
 let boxes = document.querySelectorAll(".box")
 let currentPlayer = "X"
 let btn = document.getElementById("restartBtn")
@@ -6,7 +5,7 @@ let winner = false
 
 boxes.forEach(box => {
     box.addEventListener("click", () => {
-        if (box.textContent !== "") 
+        if (box.textContent !== "" || winner) 
             return
         box.textContent = currentPlayer
 
@@ -47,7 +46,7 @@ const checkWinner = () => {
         });
 
         if (all) {
-            alert("Ta3aaaaaaaaaaaaaaaadol")
+            alert("No winner")
         }
     }
 };
